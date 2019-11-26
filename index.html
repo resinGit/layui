@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<!--极速模式-->
+		<meta name="renderer" content="webkit">
+		<title>后台管理系统</title>
+		<!--layui-v2.3.0-->
+		<link rel="stylesheet" href="./plugins/layui/css/layui.css" media="all">
+		<link rel="stylesheet" href="./plugins/font-awesome-4.7.0/css/font-awesome.min.css" />
+		<!--功能按钮样式-->
+		<link rel="stylesheet" href="./build/css/app.css" media="all">
+		<!--默认样式-->
+		<link rel="stylesheet" href="styles.css" />
+		<!--默认皮肤-->
+		<link rel="stylesheet" href="./build/css/themes/default.css" media="all" id="skin" kit-skin />
+		<!--公共样式-->
+		<link rel="stylesheet" href="common.css" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<!--访问统计 百度-->
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?1123c6760cbd8bd962766d0f2d3f2cf4";
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
+	</head>
+	<body class="kit-theme">
+		<div class="layui-layout layui-layout-admin kit-layout-admin" id="page-wrapper" v-cloak>
+			<div class="layui-header" id="headerBg" >
+				<div class="layui-logo"><a href="/">Anspray 管理后台</a></div>
+				<ul class="layui-nav layui-layout-right kit-nav" id="right-menu">
+					<li class="layui-nav-item hide" id="tag">
+						<a href="javascript:;"><i class="fa fa-tag" aria-hidden="true"></i></a>
+					</li>
+					<li class="layui-nav-item"  id="color">
+						<a href="javascript:;" class="titleA"><span class="font1">皮肤</span></a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<img src="resources/images/admin.jpg" class="layui-nav-img"><span class="font1">欢迎, {{ cookie.get('name') }}</span>
+						</a>
+						<dl class="layui-nav-child">
+							<dd class="layui-action" data-type="baseinfo">
+								<a href="javascript:;">基本资料</a>
+							</dd>
+							<dd class="layui-action" data-type="resetpassword">
+								<a href="javascript:;">修改密码</a>
+							</dd>
+							<dd class="layui-action" data-type="loginout">
+								<a href="javascript:;">退出</a>
+							</dd>
+						</dl>
+					</li>
+					<li class="layui-nav-item" id="news">
+						<a href="javascript:;"><span class="font1">消息</span></a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="javascript:;" id="copyright" style="color:#333;"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
+					</li>
+				</ul>
+			</div>
+			<div class="layui-side layui-bg-black kit-side">
+				<div class="layui-side-scroll" >
+					<!--<div class="kit-side-fold">-->
+						<!--<i class="fa fa-navicon" aria-hidden="true"></i>-->
+					<!--</div>-->
+					<!--菜单列表-->
+					<ul class="layui-nav layui-nav-tree" lay-filter="kitNavbar" kit-navbar ></ul>
+				</div>
+			</div>
+			<div class="layui-body" id="container">
+				<!-- 内容主体区域 -->
+				<div style="padding: 15px;">内容加载中,请稍等...</div>
+			</div>
+			<div class="layui-footer">
+				<!-- 底部固定区域 -->
+				CopyRight © 2017<a href=""> xxxxxx有限公司 </a>all rights rerserved MIT license
+				<!-- <a href="#/companylist">前端路由测试</a>
+				<span id="span">test</span> -->
+			</div>
+		</div>
+		<!--锁屏-->
+		<div class="admin-header-lock" id="lock-box" style="display: none;">
+			<div class="admin-header-lock-img"><img src="http://iwmzc.com/images/face.jpg" /></div>
+			<div class="admin-header-lock-name" id="lockUserName">anspray</div>
+			<div class="input_btn">
+				<input type="password" name="lockPwd" class="admin-header-lock-input layui-input" placeholder="请输入密码解锁.." id="lockPwd" />
+				<button class="layui-btn" id="unlock">解锁</button>
+			</div>
+			<p>请输入登陆密码进行解锁 !</p>
+		</div>
+		<script src="./plugins/layui/layui.js"></script>
+		<!--前端路由-->
+		<script src="./plugins/router.js"></script>
+		<!--v2.2.2-->
+		<script src="./plugins/vue.min.js"></script>
+		<!--公共函数库-->
+		<script src="./common.js"></script>
+
+		<script>
+
+			var vm = new Vue({
+				el: '#page-wrapper',
+				data: {
+					menuList: [],
+					serverDate: "0000-00-00 00:00:00",
+				},
+			});
+
+			layui.config({
+				base: 'build/js/'
+			}).use(['app', 'message', 'tab', 'ajaxmod','form', 'routermod'], function() {
+
+				var app = layui.app,
+					$ = layui.jquery,
+					element = layui.element,
+					layer = layui.layer,
+					tab = layui.tab,
+					form = layui.form,
+					ajaxmod = layui.ajaxmod,
+					routermod = layui.routermod,
+					// 将message设置为全局以便子页面调用
+					message = layui.message;
+
+				//主入口
+				app.set({
+					type: 'iframe',
+					// 设置切换是否刷新
+					isrefresh: true
+				}).init();
+
+
+			});
+
+		</script>
+	</body>
+</html>

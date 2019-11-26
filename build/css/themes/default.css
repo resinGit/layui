@@ -1,0 +1,113 @@
+.layui-layout-admin .layui-header {
+	background: #fff;
+}
+
+.kit-theme .layui-layout-admin .layui-logo {
+	background-color: #20222A
+}
+
+/*按钮颜色*/
+.kit-theme .layui-layer-btn .layui-layer-btn0 {
+    border-color: #dedede !important;
+    background-color: #fff !important;
+    color: #333;
+}
+
+.kit-theme .layui-layout-admin .layui-nav .layui-nav-item .font1 {
+    color: #fff;
+}
+
+.kit-theme .layui-layout-admin .layui-nav .layui-nav-item .titleA {
+    background-color: #333;
+    /*background-color: #fff;*/
+}
+.layui-layout-admin .layui-side{
+    padding:0;
+    background-color: #333;
+    top:52px
+
+}
+
+
+#color{
+    color: #fff;
+    background-color: #333
+}
+
+
+.kit-theme .layui-layout-admin .layui-layout-left {
+    color: #fff;
+    background-color: #333
+}
+
+#headerBg {
+    color: #fff;
+    background-color: #333
+}
+
+.kit-theme .kit-layout-admin .layui-header {
+    background-color: #fff;
+    border-bottom: 2px solid #333
+}
+
+.kit-theme .layui-nav .layui-nav-more {
+    /*border-top-color: #333*/
+    border-top-color: #fff
+}
+
+.kit-theme .layui-layout-admin .layui-side .layui-side-scroll{
+    /*border-top-color: #333*/
+    background-color: #333
+}
+
+.kit-theme .layui-layout-admin .layui-side .layui-side-scroll ui{
+    color: cornsilk;
+}
+
+.kit-theme .kit-side .layui-nav-tree .layui-nav-item {
+    background-color: #333;
+    border-bottom: 1px solid #333
+}
+
+.kit-theme .kit-side .layui-nav .layui-nav-item a {
+    color: #fff!important
+}
+
+.kit-theme .kit-side .layui-nav-tree .layui-nav-item a:hover {
+    /*background-color: #fff;*/
+    background-color: #565656;
+    color: #565656
+}
+
+.kit-theme .kit-side .layui-nav .layui-nav-itemed .layui-nav-child {
+    /*background-color: #f8f8f8!important*/
+    background-color: #44464F!important
+}
+
+.kit-theme .kit-side .layui-nav-tree .layui-nav-child dd.layui-this,
+.kit-theme .kit-side .layui-nav-tree .layui-nav-child dd.layui-this a,
+.kit-theme .kit-side .layui-nav-tree .layui-nav-child dd.layui-this a:hover,
+.kit-theme .kit-side .layui-nav-tree .layui-this,
+.kit-theme .kit-side .layui-nav-tree .layui-this>a,
+.kit-theme .kit-side .layui-nav-tree .layui-this>a:hover {
+    color: #565656!important;
+    background-color: #565656!important
+}
+
+.kit-theme .kit-side .layui-nav-tree .layui-nav-child dd:first-child {
+    /*border-top: 1px solid #EEE*/
+    border-top: 1px solid #565656
+}
+
+.kit-theme .kit-tab .layui-tab-title li.layui-this,
+.kit-theme .kit-table .kit-table-header .kit-search-inputs .kit-search-more,
+.kit-theme .layui-table-tool .layui-laypage a:hover {
+    color: #565656
+}
+
+.kit-theme .kit-nav .layui-nav-itemed .layui-nav-more,
+.kit-theme .kit-nav .layui-nav-mored,
+.kit-theme .kit-side .layui-nav-itemed .layui-nav-more,
+.kit-theme .kit-side .layui-nav-mored {
+    border-color: transparent transparent #fff
+}
