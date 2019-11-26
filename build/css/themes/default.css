@@ -111,3 +111,9 @@
 .kit-theme .kit-side .layui-nav-mored {
     border-color: transparent transparent #fff
 }
+
+.kit-theme .kit-side .layui-nav-tree .layui-nav-item a:FOCUS {
+    /*background-color: #fff;*/
+    background-color: #565656;
+    color: #fff
+}

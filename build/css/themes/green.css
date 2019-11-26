@@ -72,6 +72,12 @@
 	/*color: #fff*/
 }
 
+.kit-theme .kit-side .layui-nav-tree .layui-nav-item a:FOCUS {
+	/*background-color: #fff;*/
+	background-color: #00C372;
+	color: #fff
+}
+
 .kit-theme .kit-side .layui-nav .layui-nav-item a {
 	color: #fff!important
 }
